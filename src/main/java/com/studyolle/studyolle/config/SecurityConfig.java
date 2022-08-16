@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authz) -> authz
                         .mvcMatchers("/", "/login", "/sign-up", "/check-email", "/check-email-token",
-                                "/email-login", "/check-email-login", "/login-link").permitAll()
+                                "/email-login", "/login-link").permitAll()
                         .mvcMatchers(HttpMethod.GET, "/profile/*").permitAll()
                         .anyRequest().authenticated());
         return http.build();
