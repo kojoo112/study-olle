@@ -19,6 +19,12 @@ public class SecurityConfig {
                                 "/email-login", "/login-link").permitAll()
                         .mvcMatchers(HttpMethod.GET, "/profile/*").permitAll()
                         .anyRequest().authenticated());
+
+        http.formLogin()
+                .loginPage("/login").permitAll()
+                .and()
+                .logout()
+                .logoutSuccessUrl("/");
         return http.build();
     }
 
