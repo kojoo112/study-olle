@@ -31,3 +31,6 @@ build/
 .vscode/
 src/main/resources/static/node_modules
 src/main/resources/static/node
+
+.DS_Store
+src/.DS_Store
